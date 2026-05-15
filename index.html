@@ -282,9 +282,21 @@
     .embed-frame {
       width: 100%;
       min-height: 980px;
+      height: 100vh;
       border: 0;
       background: #ffffff;
       display: block;
+    }
+    
+    @media (max-width: 768px) {
+      .embed-frame {
+        min-height: 1200px;
+        height: auto;
+      }
+      
+      .embed-panel {
+        min-height: 1200px;
+      }
     }
 
     .info-panel {
@@ -476,10 +488,12 @@
             marginwidth="0"
             marginheight="0"
             style="border: none; max-width: 100%;"
+            allow="geolocation; microphone; camera"
             allowfullscreen
             webkitallowfullscreen
             mozallowfullscreen
-            msallowfullscreen>
+            msallowfullscreen
+            loading="lazy">
           </iframe>
         </div>
 
