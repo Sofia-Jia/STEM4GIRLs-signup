@@ -230,6 +230,103 @@
       background: var(--cds-layer);
     }
 
+    .info-section {
+      display: grid;
+      grid-template-columns: 2fr 1fr;
+      gap: var(--cds-spacing-05);
+      margin-bottom: var(--vertical-spacing);
+    }
+
+    .speaker-card,
+    .schedule-card {
+      background: var(--cds-layer);
+      padding: var(--cds-spacing-09);
+    }
+
+    .speaker-card h2,
+    .schedule-card h2 {
+      font-family: 'IBM Plex Sans', sans-serif;
+      font-size: 1.75rem;
+      font-weight: 400;
+      line-height: 1.29;
+      margin-bottom: var(--cds-spacing-07);
+      color: var(--cds-gray-100);
+    }
+
+    .speaker-content {
+      display: grid;
+      grid-template-columns: 160px 1fr;
+      gap: var(--cds-spacing-07);
+      align-items: start;
+    }
+
+    .speaker-image {
+      overflow: hidden;
+      background: var(--cds-border-subtle);
+    }
+
+    .speaker-image img {
+      width: 100%;
+      height: auto;
+      display: block;
+    }
+
+    .speaker-bio {
+      background: var(--cds-white);
+      padding: var(--cds-spacing-06);
+    }
+
+    .speaker-bio h3 {
+      font-size: 1.25rem;
+      font-weight: 600;
+      margin-bottom: var(--cds-spacing-03);
+      color: var(--cds-gray-100);
+    }
+
+    .speaker-bio .speaker-title {
+      font-size: 0.875rem;
+      font-style: italic;
+      color: var(--cds-gray-70);
+      margin-bottom: var(--cds-spacing-05);
+      display: block;
+    }
+
+    .speaker-bio p {
+      font-size: 0.875rem;
+      line-height: 1.6;
+      color: var(--cds-gray-100);
+      font-weight: 300;
+    }
+
+    .schedule-card .schedule-date {
+      font-size: 1rem;
+      font-weight: 600;
+      color: var(--cds-gray-100);
+      margin-bottom: var(--cds-spacing-06);
+    }
+
+    .schedule-card ul {
+      padding-left: 0;
+      list-style: none;
+      display: grid;
+      gap: var(--cds-spacing-05);
+    }
+
+    .schedule-card li {
+      font-size: 0.875rem;
+      line-height: 1.43;
+      color: var(--cds-gray-100);
+      font-weight: 300;
+      padding-left: var(--cds-spacing-06);
+      border-left: 2px solid var(--cds-blue-60);
+    }
+
+    .schedule-card li strong {
+      display: block;
+      font-weight: 600;
+      margin-bottom: var(--cds-spacing-02);
+    }
+
     .visual-main {
       overflow: hidden;
       min-height: 360px;
@@ -386,6 +483,7 @@
 
     @media (max-width: 980px) {
       .hero,
+      .info-section,
       .embed-layout {
         grid-template-columns: 1fr;
       }
@@ -406,6 +504,8 @@
 
       .hero-copy,
       .hero-visual,
+      .speaker-card,
+      .schedule-card,
       .form-card {
         padding: var(--cds-spacing-06);
       }
@@ -413,6 +513,16 @@
       .hero-details,
       .visual-grid {
         grid-template-columns: 1fr;
+      }
+
+      .speaker-content {
+        grid-template-columns: 1fr;
+        gap: var(--cds-spacing-05);
+      }
+
+      .speaker-image {
+        max-width: 160px;
+        margin: 0 auto;
       }
 
       .embed-frame {
@@ -476,6 +586,47 @@
       </div>
     </section>
 
+    <section class="info-section">
+      <div class="speaker-card">
+        <h2>Meet Our Speaker</h2>
+        <div class="speaker-content">
+          <div class="speaker-image">
+            <img src="speaker-headshot.jpg" alt="Christine Simpson headshot" />
+          </div>
+          <div class="speaker-bio">
+            <h3>Christine Simpson</h3>
+            <span class="speaker-title">NHL Features Reporter, Prime Monday Night Hockey</span>
+            <p>
+              Christine Simpson is currently an NHL Features Reporter for Prime Monday Night Hockey. But she has worked in the hockey world for over 30 years, first as the marketing manager of the Hockey Hall of Fame. The London, ON native was hired by the Toronto Maple Leafs in 1995 as their first in-arena game host. Her broadcasting career began when she joined Sportsnet when the network launched in 1998 and during her over 2 decades at Sportsnet & Hockey Night in Canada she interviewed the biggest & brightest stars of the NHL. South of the border she has worked as a rinkside reporter & host for NHL games on ABC, ESPN, MSG & hosted a show on the NHL Network. Simpson made history when she was part of the first all-female broadcast of an NHL game in Canada on International Women's Day in 2020.
+            </p>
+          </div>
+        </div>
+      </div>
+
+      <div class="schedule-card">
+        <h2>Event Schedule</h2>
+        <p class="schedule-date">Sunday, June 14, 2026</p>
+        <ul>
+          <li>
+            <strong>9:00 AM – 9:45 AM</strong>
+            Registration and welcome
+          </li>
+          <li>
+            <strong>9:45 AM – 10:15 AM</strong>
+            Q&A with Christine Simpson
+          </li>
+          <li>
+            <strong>10:15 AM – 12:15 PM</strong>
+            Interactive STEM activities and programming
+          </li>
+          <li>
+            <strong>12:15 PM – 1:00 PM</strong>
+            Pizza lunch
+          </li>
+        </ul>
+      </div>
+    </section>
+
     <section class="form-card">
       <div class="form-head">
         <div>
@@ -501,16 +652,6 @@
         </div>
 
         <aside class="info-panel">
-          <div class="info-card">
-            <h3>Event Schedule</h3>
-            <p style="margin-bottom: var(--cds-spacing-05);"><strong>Sunday, June 14, 2026</strong></p>
-            <ul>
-              <li><strong>9:00 AM – 9:45 AM</strong> – Registration and welcome</li>
-              <li><strong>10:00 AM – 12:15 PM</strong> – Interactive STEM activities and programming</li>
-              <li><strong>12:15 PM – 1:00 PM</strong> – Pizza lunch</li>
-            </ul>
-          </div>
-
           <div class="info-card">
             <h3>Having trouble with the embedded form?</h3>
             <p>
