@@ -255,6 +255,12 @@
 
     .speaker-content {
       display: grid;
+      grid-template-columns: 1fr;
+      gap: var(--cds-spacing-07);
+    }
+
+    .speaker-profile {
+      display: grid;
       grid-template-columns: 160px 1fr;
       gap: var(--cds-spacing-07);
       align-items: start;
@@ -263,11 +269,13 @@
     .speaker-image {
       overflow: hidden;
       background: var(--cds-border-subtle);
+      aspect-ratio: 1;
     }
 
     .speaker-image img {
       width: 100%;
-      height: auto;
+      height: 100%;
+      object-fit: cover;
       display: block;
     }
 
@@ -277,7 +285,7 @@
     }
 
     .speaker-bio h3 {
-      font-size: 1.25rem;
+      font-size: 1.125rem;
       font-weight: 600;
       margin-bottom: var(--cds-spacing-03);
       color: var(--cds-gray-100);
@@ -517,11 +525,16 @@
 
       .speaker-content {
         grid-template-columns: 1fr;
+        gap: var(--cds-spacing-07);
+      }
+
+      .speaker-profile {
+        grid-template-columns: 1fr;
         gap: var(--cds-spacing-05);
       }
 
       .speaker-image {
-        max-width: 160px;
+        max-width: 200px;
         margin: 0 auto;
       }
 
@@ -542,7 +555,7 @@
         <h1>STEM <span>4 Girls</span></h1>
         <p class="lead">
           IBM invites you and your daughter to join us for a fun and inspiring morning of STEM and sport activities.
-          The day will include interactive sessions, a Q&A with an NHL broadcaster, guided discussions, and a pizza lunch.
+          The day will include interactive sessions, a Q&A hosted by an IBM leader, guided discussions, and a pizza lunch.
           Recommended for girls in Grades 6–8.
         </p>
         <div class="hero-details">
@@ -588,17 +601,32 @@
 
     <section class="info-section">
       <div class="speaker-card">
-        <h2>Meet Our Speaker</h2>
+        <h2>Inspiring Conversation</h2>
         <div class="speaker-content">
-          <div class="speaker-image">
-            <img src="speaker-headshot.jpg" alt="Christine Simpson headshot" />
+          <div class="speaker-profile">
+            <div class="speaker-image">
+              <img src="host-headshot.jpeg" alt="Suelynn Newcombe headshot" />
+            </div>
+            <div class="speaker-bio">
+              <h3>Host: Suelynn Newcombe</h3>
+              <span class="speaker-title">National Automation Sales Director, IBM</span>
+              <p>
+                Suelynn Newcombe is the National Automation Sales Director at IBM, where she spearheads automation initiatives across key industries in Canada. Previously, Suelynn was Chief of Staff to IBM Canada's President and GM of Technology, Deb Pimentel. She also served as the Technology Sales Leader for Scotiabank, managing complex client relationships and leading large-scale transformation projects to drive business success. Beyond her professional accomplishments, Suelynn is dedicated to empowering young girls through her role as a girls' basketball coach. She is also a passionate advocate for STEM for Girls, leading initiatives to encourage the next generation of female leaders in technology through mentorship, workshops, and conferences.
+              </p>
+            </div>
           </div>
-          <div class="speaker-bio">
-            <h3>Christine Simpson</h3>
-            <span class="speaker-title">NHL Features Reporter, Prime Monday Night Hockey</span>
-            <p>
-              Christine Simpson is currently an NHL Features Reporter for Prime Monday Night Hockey. But she has worked in the hockey world for over 30 years, first as the marketing manager of the Hockey Hall of Fame. The London, ON native was hired by the Toronto Maple Leafs in 1995 as their first in-arena game host. Her broadcasting career began when she joined Sportsnet when the network launched in 1998 and during her over 2 decades at Sportsnet & Hockey Night in Canada she interviewed the biggest & brightest stars of the NHL. South of the border she has worked as a rinkside reporter & host for NHL games on ABC, ESPN, MSG & hosted a show on the NHL Network. Simpson made history when she was part of the first all-female broadcast of an NHL game in Canada on International Women's Day in 2020.
-            </p>
+
+          <div class="speaker-profile">
+            <div class="speaker-image">
+              <img src="speaker-headshot.jpg" alt="Christine Simpson headshot" />
+            </div>
+            <div class="speaker-bio">
+              <h3>Guest: Christine Simpson</h3>
+              <span class="speaker-title">NHL Features Reporter, Prime Monday Night Hockey</span>
+              <p>
+                Christine Simpson is currently an NHL Features Reporter for Prime Monday Night Hockey. She has worked in the hockey world for over 30 years, first as the marketing manager of the Hockey Hall of Fame. The London, ON native was hired by the Toronto Maple Leafs in 1995 as their first in-arena game host. Her broadcasting career began when she joined Sportsnet when the network launched in 1998 and during her over 2 decades at Sportsnet & Hockey Night in Canada she interviewed the biggest & brightest stars of the NHL. South of the border she has worked as a rinkside reporter & host for NHL games on ABC, ESPN, MSG & hosted a show on the NHL Network. Simpson made history when she was part of the first all-female broadcast of an NHL game in Canada on International Women's Day in 2020.
+              </p>
+            </div>
           </div>
         </div>
       </div>
